@@ -53,8 +53,7 @@ public class ProdutoController {
 	
 	@PutMapping
 	public ResponseEntity<Produto> put(@RequestBody Produto produto){		//método put: para atualizar dados
-		return ResponseEntity.status(HttpStatus.OK)
-				.body(repository.save(produto));
+		return ResponseEntity.ok(repository.save(produto));
 	}
 	
 	@DeleteMapping("/{id}")
